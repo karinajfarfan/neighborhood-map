@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import logo from "./logo.svg";
 import Map from "./components/Map";
+import Background from "./components/Background";
 import "./App.css";
 
 class App extends Component {
@@ -19,6 +20,7 @@ class App extends Component {
     if (!this.state.handleOnClick) {
       return (
         <div className="App-header" onClick={this.handleOnClick}>
+          <Background />
           <img src={logo} className="App-logo" alt="logo" />
           <h1>Welcome to Draper, Utah.</h1>
           <p>Click to begin exploring.</p>

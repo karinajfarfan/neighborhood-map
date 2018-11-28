@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 
 class Places extends Component {
-  state = {
+  
     //Static list of 5 places in Draper, UT
-    places: [
+    const places = [
       {
         title: "Paragliding Park: South Side",
         location: { lat: 40.457842, lng: -111.901385 }
@@ -22,7 +22,7 @@ class Places extends Component {
         location: { lat: 40.47218, lng: -111.836228 }
       }
     ]
-  };
+  
 
   render() {
     return {};
