@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import logo from "./logo.svg";
-import Map from "./components/Map";
+import MapContainer from "./components/Map";
 import Background from "./components/Background";
 import "./App.css";
 
@@ -29,7 +29,7 @@ class App extends Component {
     } else {
       return (
         <div>
-          <Map />
+          <MapContainer />
         </div>
       );
     }

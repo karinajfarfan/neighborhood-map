@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 
-class Menu extends Component {
+class Filter extends Component {
   render() {
     return {};
   }
 }
+
+export default Filter;

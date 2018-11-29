@@ -39,6 +39,7 @@ Built with: HTML, CSS, JavaScript, React and API usage.
 - [React Bootstrap](https://react-bootstrap.github.io/)
 - [FourSquare API](https://developer.foursquare.com/)
 - [Google Maps API Javascript](https://developers.google.com/maps/documentation/javascript/tutorial)
+- [Google Map React Component Tutorial](https://www.npmjs.com/package/google-maps-react)
 - [Geocoder Location](https://google-developers.appspot.com/maps/documentation/utils/geocoder/#place_id%3DChIJD18TU1GAUocRsnDPJq-jOuo)
 - [Flat Icon](https://www.flaticon.com/)
 

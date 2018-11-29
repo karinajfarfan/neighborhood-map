@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import img from "./img/img.js";
+import img from "./img/img.jpg";
 
 //Welcome page background image
 
