@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import logo from ".././logo.svg";
 import img from "./img/img.jpg";
-import MapContainer from "./Map";
+import Main from "./Main";
 
 //Welcome page background image
 
@@ -36,7 +36,7 @@ class Welcome extends Component {
     } else {
       return (
         <div>
-          <MapContainer />
+          <Main />
         </div>
       );
     }
