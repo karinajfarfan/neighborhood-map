@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import logo from ".././logo.svg";
-import img from "./img/img.jpg";
 import Main from "./Main";
 
-//Welcome page background image
+//Welcome page handles on click method
 
 class Welcome extends Component {
   constructor(props) {
@@ -20,15 +19,8 @@ class Welcome extends Component {
   renderWelcome = () => {
     if (!this.state.handleOnClick) {
       return (
-        <div className="App-header" onClick={this.handleOnClick}>
-          <img
-            src={img}
-            alt="background"
-            style={{ width: "100%" }}
-            role="image"
-            aria-label="Photo by Aksonsat Uanthoeng from Pexels"
-          />
-          <img src={logo} className="App-logo" alt="logo" />
+        <div className="welcome" onClick={this.handleOnClick}>
+          <img src={logo} className="marker-logo" alt="logo" />
           <h1>Welcome to Draper, Utah.</h1>
           <p>Click to begin exploring.</p>
         </div>

@@ -1,11 +1,12 @@
 import React, { Component } from "react";
-import MapContainer from "./Map";
+import MapContainer from "./MapContainer";
 import Sidebar from "./Sidebar";
-// import PropTypes from "prop-types";
 
-//Passes places into the map as props.
+//Passes places into the MapContainer as props.
 
 //Static list of 5 locations in Draper, UT
+//lat lng specifics can be found with the Geocoder location site
+
 const places = [
   {
     title: "Paragliding Park: South Side",
@@ -30,8 +31,8 @@ class Main extends Component {
   render() {
     return (
       <div>
-        <MapContainer activeMarkers={places} />
-        <Sidebar places={places} />
+        <MapContainer places={places} />
+        {/* <Sidebar places={places} /> */}
       </div>
     );
   }
