@@ -5,9 +5,13 @@ class Sidebar extends Component {
     // console.log("Props", this.props);
     return (
       <ol className="places-list">
-        {this.props.contacts.map(places => (
-          <li>{places.title}</li>
-        ))}
+        {this.props.places.map(places => {
+          <li className="places-list-item">
+            <div className="places-details">
+              <p>{places.title}</p>
+            </div>
+          </li>;
+        })}
       </ol>
     );
   }

@@ -11,6 +11,7 @@ class MapContainer extends Component {
     selectedPlace: {}
   };
 
+  // When info window is opened
   onMarkerClick = (props, marker) =>
     this.setState({
       selectedPlace: props,
@@ -18,6 +19,7 @@ class MapContainer extends Component {
       showingInfoWindow: true
     });
 
+  // When info window is closed
   onMapClicked = () => {
     if (this.state.showingInfoWindow) {
       this.setState({
@@ -27,12 +29,14 @@ class MapContainer extends Component {
     }
   };
 
+  // Renders Map, Markers, and Info Window
   render() {
     return (
       <Map
         google={this.props.google}
         className={"map"}
         style={{ width: "100%", height: "100%" }}
+        //Map centered at Draper, UT
         initialCenter={{
           lat: 40.524671,
           lng: -111.863823
@@ -40,8 +44,8 @@ class MapContainer extends Component {
         zoom={12}
       >
         <Marker
-          name={"Draper Park"}
-          position={{ lat: 40.523436, lng: -111.85459 }}
+          name={places.title} //this is not working - how can i call the places object properties
+          position={places.location} //this is not working - how can i call the places object properties
           onClick={this.onMarkerClick}
         />
         <InfoWindow
@@ -57,6 +61,7 @@ class MapContainer extends Component {
   }
 }
 
+// Google Maps API key
 export default GoogleApiWrapper({
   apiKey: "AIzaSyBYX4tZYpMWfZQ_kdub-M4ONYJFKQTp6Ac"
 })(MapContainer);

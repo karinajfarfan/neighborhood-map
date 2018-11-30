@@ -26,11 +26,6 @@
     transform: rotate(360deg);
   }
 }
-/* 
-.welcome-img {
-  border: 1px solid #000;
-  background: url(/.../img/map&pin.jpg);
- */
 
 #map {
   height: 100vh;
@@ -41,3 +36,7 @@ body {
   margin: 0;
   padding: 0;
 }
+
+/* 
+ToDo: style welcome page - image behind header, include sidebar style - make super simple 
+*/

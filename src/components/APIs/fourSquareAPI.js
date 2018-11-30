@@ -1,4 +1,4 @@
-/* Four Square API */
+/* Four Square API fetch request */
 
 const CLIENT_ID = "HB03ZGOVXHUVQTLNYCZ2ATY3HJ3XSCA2MC023G0JPTISW1II";
 const CLIENT_SECRET = "KFRAYOS3IYLOKECR1RVWNZD4SZ5CUSOQV3QZPZIUOAGP5ARZ";
@@ -29,3 +29,19 @@ export const getDetails = id =>
   )
     .then(res => res.json())
     .catch("error");
+
+//creating the link to get the venue details, uses lat, lng, and name to search for the venue ID.
+//Then uses the venue id to retrieve details about the venue.
+// the promise also catches the error, if error occurs.
+//promise works similar to an if else function
+//I don't understand the const Radius_m
+
+// fetch('https://api.foursquare.com/v2/venues/explore?client_id=CLIENT_ID&client_secret=CLIENT_SECRET&v=20180323&limit=1&ll=40.7243,-74.0018&query=coffee')
+// .then(function() {
+//     // Code for handling API response
+// })
+// .catch(function() {
+//     // Code for handling errors
+// });
+
+// ToDO: foursquare has a react library - will commit this version and try the foursquare react library --- maybe check out http://stevebrown.co/journal/creating-a-local-venue-app-using-reactredux-with-the-foursquare-api-part-i

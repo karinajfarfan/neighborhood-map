@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import MapContainer from "./Map";
 import Sidebar from "./Sidebar";
+// import PropTypes from "prop-types";
 
-/*Passes all places into the map as props.*/
+//Passes places into the map as props.
 
-//Static list of 5 places in Draper, UT
+//Static list of 5 locations in Draper, UT
 const places = [
   {
     title: "Paragliding Park: South Side",
@@ -29,7 +30,7 @@ class Main extends Component {
   render() {
     return (
       <div>
-        <MapContainer />
+        <MapContainer activeMarkers={places} />
         <Sidebar places={places} />
       </div>
     );
