@@ -44,6 +44,7 @@ class MapContainer extends Component {
     }
   };
 
+  //takes the prop place from the array in the main component
   renderMarkers = (place, index) => {
     return (
       <Marker
@@ -55,6 +56,7 @@ class MapContainer extends Component {
     );
   };
 
+  //stores foursquare api info in the imgSrc to display on infoWindow
   renderFourSquareAPI = () => {
     if (
       Object.keys(this.state.activeMarker).length === 0 &&
@@ -92,7 +94,7 @@ class MapContainer extends Component {
       <Map
         google={this.props.google}
         className={"map"}
-        style={{ width: "100%", height: "100%" }}
+        style={{ width: "80%", height: "100%" }}
         //Map centered at Draper, UT
         initialCenter={{
           lat: 40.524671,

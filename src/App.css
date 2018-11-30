@@ -25,15 +25,32 @@
   }
 }
 
-#map {
-  height: 100vh;
-}
 html,
 body {
   height: 100%;
   margin: 0;
   padding: 0;
 }
+
+.sidebarContainer {
+  width: 15%;
+  height: 100%;
+  float: right;
+  position: relative;
+}
+
+.list-item {
+  display: block;
+  font-size: 16px;
+  text-align: center;
+  width: 150px;
+}
+/* 
+@media screen and (min-width: 599px) {
+  .map {
+    width: 75%;
+  }
+} */
 
 /* 
 ToDo: style side bar 

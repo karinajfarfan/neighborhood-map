@@ -1,20 +1,24 @@
-// import React, { Component } from "react";
+import React, { Component } from "react";
 
-// class Sidebar extends Component {
-//   render() {
-//     // console.log("Props", this.props);
-//     return (
-//       <ol className="places-list">
-//         {this.props.places.map(places => {
-//           <li className="places-list-item">
-//             <div className="places-details">
-//               <p>{places.title}</p>
-//             </div>
-//           </li>;
-//         })}
-//       </ol>
-//     );
-//   }
-// }
+class Sidebar extends Component {
+  renderList = (place, index) => {
+    return (
+      <button
+        key={index}
+        name={place.title}
+        position={place.location}
+        onClick={this.onMarkerClick}
+      />
+    );
+  };
 
-// export default Sidebar;
+  render() {
+    return (
+      <div className="sidebarContainer">
+        {this.props.places.map((place, index) => this.renderList(place, index))}
+      </div>
+    );
+  }
+}
+
+export default Sidebar;
