@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from "google-maps-react";
 import { getSearchResult, getDetails } from "./APIs/fourSquareAPI.js";
-// import Sidebar from "./Sidebar";
+import Sidebar from "./Sidebar";
 
 class MapContainer extends Component {
   constructor(props) {
@@ -45,6 +45,7 @@ class MapContainer extends Component {
     if (this.state.showingInfoWindow) {
       this.setState({
         showingInfoWindow: false,
+        imgSrc: <div>no img</div>,
         activeMarker: null
       });
     }
@@ -81,10 +82,8 @@ class MapContainer extends Component {
             imgSrc: <img src={imgSrc} alt="retrieved from foursquareAPI" />,
             showingInfoWindow: true
           });
-          console.log("rFSAPI else", details.response);
         })
         .catch(err => {
-          console.log("err", err);
           this.setState({ imgSrc: <div>err</div>, showingInfoWindow: true });
         });
     });
@@ -115,6 +114,7 @@ class MapContainer extends Component {
             <div>{this.state.imgSrc}</div>
           </InfoWindow>
         </Map>
+        <Sidebar places={this.props.places} />
       </div>
     );
   }
