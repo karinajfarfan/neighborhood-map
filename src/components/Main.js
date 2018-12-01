@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import MapContainer from "./MapContainer";
-import Sidebar from "./Sidebar";
 
 //Passes places into the MapContainer as props.
 
@@ -32,7 +31,6 @@ class Main extends Component {
     return (
       <div>
         <MapContainer places={places} />
-        <Sidebar places={places} />
       </div>
     );
   }

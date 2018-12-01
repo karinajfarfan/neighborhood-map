@@ -1,24 +1,32 @@
-import React, { Component } from "react";
+// import React, { Component } from "react";
 
-class Sidebar extends Component {
-  renderList = (place, index) => {
-    return (
-      <button
-        key={index}
-        name={place.title}
-        position={place.location}
-        onClick={this.onMarkerClick}
-      />
-    );
-  };
+// class Sidebar extends Component {
+//   // constructor(props) {
+//   //   super(props);
+//   //   this.state = {
+//   //     place: true
+//   //   };
+//   // }
 
-  render() {
-    return (
-      <div className="sidebarContainer">
-        {this.props.places.map((place, index) => this.renderList(place, index))}
-      </div>
-    );
-  }
-}
+//   renderList = (place, index) => {
+//     return (
+//       <button
+//         className="list-item"
+//         key={index}
+//         name={props.place.title}
+//         position={props.place.location}
+//         // onClick={this.onMarkerClick}
+//       />
+//     );
+//   };
 
-export default Sidebar;
+//   render() {
+//     return (
+//       <div className="sidebarContainer">
+//         {this.props.places.map((place, index) => this.renderList(place, index))}
+//       </div>
+//     );
+//   }
+// }
+
+// export default Sidebar;
