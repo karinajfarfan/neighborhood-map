@@ -1,32 +1,35 @@
 import React, { Component } from "react";
 
-class Sidebar extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     place: true
-  //   };
-  // }
-
-  renderList = (place, index) => {
+const Sidebar = props => {
+  const renderList = (place, index) => {
     return (
       <button
         className="list-item"
         key={index}
-        name={props.place.title}
-        position={props.place.location}
-        onClick={this.onMarkerClick}
-      />
+        position={place.location}
+        onClick={() => props.sidebarElementOnClick(place)}
+      >
+        {place.title}
+      </button>
     );
   };
 
-  render() {
-    return (
-      <div className="sidebarContainer">
-        {this.props.places.map((place, index) => this.renderList(place, index))}
-      </div>
-    );
-  }
-}
+  return (
+    <div className="sidebarContainer">
+      {props.places.map((place, index) => renderList(place, index))}
+      <form>
+        <label>
+          filter:
+          <input
+            type="text"
+            value={props.filterValue}
+            onChange={props.filterResults}
+          />
+        </label>
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+  );
+};
 
 export default Sidebar;
